@@ -1,3 +1,6 @@
+package First;
+
+import java.util.Scanner;
 /* *
  * Java语言支持的变量类型有：
  * 类变量：独立于方法之外的变量，用 static 修饰。
@@ -44,42 +47,50 @@
  * 抽象方法的声明以分号结尾，例如：public abstract sample();。
  */
 
+final class Second{
+
+}
+
+
 public class First {
     static int s_cnt = 0; // 类变量
     int cnt = 0;// 实例变量
-    final int SIZE=10; //const
+    final int SIZE = 10; // const
+    static String name = "Tang Quanwei";
 
-    public void printArray(int[] array){
+    public void printArray(int[] array) {
         System.out.print(array);
     }
-    
 
     public void addCnt() {
         ++s_cnt;
         ++cnt;
     }
 
-    static String name = "Tang Quanwei";
+    public void showCnt() {
+        System.out.println(cnt);
+    }
 
     public static void showName(boolean isOn) {
         if (isOn)
             System.out.println(name);
     }
 
-    public void showCnt(){
-        System.out.println(cnt);
+    public static void convert() {
+        /* 英制到公制 */
+        int foot;
+        int inch;// 两个整数的运算结果一定是整数
+        Scanner in = new Scanner(System.in);// 惯用
+        foot = in.nextInt();
+        inch = in.nextInt();
+        System.out.println((foot + inch / 12f) * 0.3048);
+        in.close();
     }
 
     public static void main(String[] args) {
         // showName(true);
-        int age1 = 10;// 局部变量
-        int age2 = 20;
-        int temp = age1;
-        age1 = age2;
-        age2 = temp;
-        System.out.println(age1 + age2);
-        System.out.println(age1);
-        int[] arr = {1,2,3,4,5};
-        System.out.println(arr);
+        // int age1 = 10;// 局部变量
+        convert();
     }
 }
+
