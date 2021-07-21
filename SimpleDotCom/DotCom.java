@@ -1,18 +1,22 @@
 package SimpleDotCom;
 
 import java.io.*;
+import java.util.ArrayList;
 
 class DotComTestDrive {
     public static void main(String[] args) {
         DotCom sdc = new DotCom();
-        int random = (int) (Math.random() * 8); // 随机数
-        int[] location = { random, random + 1, random + 2 };
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        Integer random = (int) (Math.random() * 8); // 随机数
+        a.add(random);
+        a.add(random + 1);
+        a.add(random + 2);
         int numOfGuesses = 0;
 
-        sdc.setLocationCells(location);
+        sdc.setLocationCells(a);
         boolean isAlive = true;
         while (isAlive) {
-            String guess = GameHelper.getUserInput("请输出位置: ");
+            String guess = GameHelper.getUserInput("请输入位置: ");
             String result = sdc.cheakYourself(guess);
             ++numOfGuesses;
             if (result.equals("Kill")) {
@@ -24,24 +28,25 @@ class DotComTestDrive {
 }
 
 public class DotCom {
-    int[] locationcells;
+    ArrayList<Integer> locationcells;
     int numOfHits = 0;
 
-    public void setLocationCells(int[] locations) {
+    public void setLocationCells(ArrayList<Integer> locations) {
         locationcells = locations;
     }
 
     public String cheakYourself(String stringGuess) {
-        int guess = Integer.parseInt(stringGuess);
+        Integer guess = Integer.parseInt(stringGuess);
         String result = "Miss";
         for (int cell : locationcells) {
             if (guess == cell) {
                 result = "Hit";
                 ++numOfHits;
+                locationcells.remove(guess);
                 break;
             }
         }
-        if (numOfHits == locationcells.length)
+        if (locationcells.size()==0)
             result = "Kill";
         System.out.println(result);
         return result;
