@@ -1,6 +1,5 @@
 package SimpleDotCom;
 
-import java.io.*;
 import java.util.ArrayList;
 
 class DotComTestDrive {
@@ -46,25 +45,9 @@ public class DotCom {
                 break;
             }
         }
-        if (locationcells.size()==0)
+        if (locationcells.size() == 0)
             result = "Kill";
         System.out.println(result);
         return result;
-    }
-}
-
-class GameHelper {
-    public static String getUserInput(String prompt) {
-        System.out.println(prompt + "   ");
-        String inputLine = null;
-        try {
-            BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
-            inputLine = is.readLine();
-            if (inputLine.length() == 0)
-                return null;
-        } catch (IOException e) {
-            System.out.println("IOException: " + e);
-        }
-        return inputLine;
     }
 }
