@@ -1,4 +1,4 @@
-package InfoSystem;
+package infosystem;
 
 import java.io.Serializable;
 import java.io.FileInputStream;

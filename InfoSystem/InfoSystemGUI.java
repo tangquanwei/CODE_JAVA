@@ -1,12 +1,23 @@
-package InfoSystem;
+/**
+ * 信息管理系统 
+ * 功能: 
+ * 0. 添加信息 
+ * 1. 删除信息 
+ * 2. 查找信息 
+ * 3. 修改信息 
+ * 4. 信息排序 
+ * 5. 显示信息 
+ * 6. 清空信息 
+ * 7. 退出系统
+ * @author Tang Quanwei
+ * @version v0.1
+ */
+package infosystem;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- * 信息管理系统 功能: 0. 添加信息 1. 删除信息 2. 查找信息 3. 修改信息 4. 信息排序 5. 显示信息 6. 清空信息 7. 退出系统
- */
 public class InfoSystemGUI {
     JFrame frame;
 
@@ -15,6 +26,7 @@ public class InfoSystemGUI {
         gui.go();
     }
 
+    
     public void go() {
         frame = new JFrame(); // ? 框架
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,8 +51,8 @@ public class InfoSystemGUI {
             panel0.add(buttons[i]); // add one by one
         }
 
-        JLabel wellcomeLabel=new JLabel("欢迎使用信息管理系统 :)");
-        
+        JLabel wellcomeLabel = new JLabel("欢迎使用信息管理系统 :)");
+
         var panel1 = new JPanel();
         panel1.add(wellcomeLabel);
 
@@ -55,7 +67,7 @@ public class InfoSystemGUI {
      */
     public class Button0Listener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-            var add=new AddInfoGUI();
+            var add = new AddInfoGUI();
             add.gui();
         }
     }

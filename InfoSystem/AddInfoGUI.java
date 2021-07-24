@@ -1,4 +1,4 @@
-package InfoSystem;
+package infosystem;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;

@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;

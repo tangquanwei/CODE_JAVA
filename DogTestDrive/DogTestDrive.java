@@ -1,4 +1,4 @@
-package DogTestDrive;
+package dogtestdrive;
 
 public class DogTestDrive {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package SimpleDotCom;
+package dotcom;
 
 import java.io.*;
 
