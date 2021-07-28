@@ -1,6 +1,6 @@
 # CODE_JAVA
 ### 术语说明：块状结构(block-like construct)指的是一个类，方法或构造函数的主体。需要注意的是，数组初始化中的初始值可被选择性地视为块状结构(4.8.3.1节)。
-
+# 1 ***标识符***
 ## 1.1 对所有标识符都通用的规则
 标识符只能使用ASCII字母和数字，因此每个有效的标识符名称都能匹配正则表达式\w+。
 
@@ -97,3 +97,31 @@ Prose form                Correct               Incorrect
 加星号处表示可以，但不推荐。
 
 Note：在英语中，某些带有连字符的单词形式不唯一。例如："nonempty"和"non-empty"都是正确的，因此方法名checkNonempty和checkNonEmpty也都是正确的。
+
+---
+# 2 ***命令***
+## 2.1 javac命令 编译.java -> 生成.class文件
+```bash
+javac [options] <source files>
+```
+## 2.2 java命令 执行一个类
+```bash
+# (to execute a class)
+java [options] <mainclass> [args...]
+# (to execute a jar file)
+java [options] -m <module>[/<mainclass>] [args...]
+```
+## 2.3 jar命令 打包.class -> .jar
+```bash
+jar {ctxui}[vfmn0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ...
+
+# Example 1: to archive two class files into an archive called classes.jar:
+       jar cvf classes.jar Foo.class Bar.class
+
+# Example 2: use an existing manifest file 'mymanifest' and archive all the files in the foo/ directory into 'classes.jar':
+       jar cvfm classes.jar mymanifest -C foo/ .
+```
+## 2.4 javadoc命令 生成文档
+```bash
+javadoc [options] [packagenames] [sourcefiles] [@files]
+```

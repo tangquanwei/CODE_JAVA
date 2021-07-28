@@ -6,6 +6,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch GenericClass",
+            "request": "launch",
+            "mainClass": "generic.GenericClass",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch pta",
+            "request": "launch",
+            "mainClass": "pta",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Basic",
+            "request": "launch",
+            "mainClass": "algorims.Basic",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SyntacticSuger",
+            "request": "launch",
+            "mainClass": "syntacticsugar.SyntacticSuger",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyArrayTestDrive",
+            "request": "launch",
+            "mainClass": "collections.MyArrayTestDrive",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleChatServer",
+            "request": "launch",
+            "mainClass": "thread.SimpleChatServer",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleChatClient1",
+            "request": "launch",
+            "mainClass": "thread.SimpleChatClient1",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleChatClient",
+            "request": "launch",
+            "mainClass": "thread.SimpleChatClient",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreadTester",
+            "request": "launch",
+            "mainClass": "thread.ThreadTester",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
             "name": "Launch DayAdviceClient",
             "request": "launch",
             "mainClass": "NET.DayAdviceClient",
