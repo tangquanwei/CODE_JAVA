@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Reflection",
+            "request": "launch",
+            "mainClass": "reflection.Reflection",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
             "name": "Launch GenericClass",
             "request": "launch",
             "mainClass": "generic.GenericClass",
