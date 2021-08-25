@@ -1,30 +1,42 @@
 # CODE_JAVA
-### 术语说明：块状结构(block-like construct)指的是一个类，方法或构造函数的主体。需要注意的是，数组初始化中的初始值可被选择性地视为块状结构(4.8.3.1节)。
-# 1 ***标识符***
+
+---
+
+ 术语说明：块状结构(block-like construct)指的是一个类，方法或构造函数的主体。需要注意的是，数组初始化中的初始值可被选择性地视为块状结构(4.8.3.1节)。
+
+## 1 ***标识符***
+
 ## 1.1 对所有标识符都通用的规则
+
 标识符只能使用ASCII字母和数字，因此每个有效的标识符名称都能匹配正则表达式\w+。
 
 在Google其它编程语言风格中使用的特殊前缀或后缀，如name_, mName, s_name和kName，在Java编程风格中都不再使用。
 
 ## 1.2 标识符类型的规则
-## 1.2.1 包名
+
+### 1.2.1 包名
+
 包名全部小写，连续的单词只是简单地连接起来，不使用下划线。
 
-## 1.2.2 类名
+
+### 1.2.2 类名
+
 类名都以UpperCamelCase风格编写。
 
 类名通常是名词或名词短语，接口名称有时可能是形容词或形容词短语。现在还没有特定的规则或行之有效的约定来命名注解类型。
 
 测试类的命名以它要测试的类的名称开始，以Test结束。例如，HashTest或HashIntegrationTest。
 
-## 1.2.3 方法名
+### 1.2.3 方法名
+
 方法名都以lowerCamelCase风格编写。
 
 方法名通常是动词或动词短语。
 
 下划线可能出现在JUnit测试方法名称中用以分隔名称的逻辑组件。一个典型的模式是：test<MethodUnderTest>_<state>，例如testPop_emptyStack。 并不存在唯一正确的方式来命名测试方法。
 
-## 1.2.4 常量名
+### 1.2.4 常量名
+
 常量名命名模式为CONSTANT_CASE，全部字母大写，用下划线分隔单词。那，到底什么算是一个常量？
 
 每个常量都是一个**静态final**字段，但不是所有静态final字段都是常量。在决定一个字段是否是一个常量时， 考虑它是否真的感觉像是一个常量。例如，如果任何一个该实例的观测状态是可变的，则它几乎肯定不会是一个常量。 只是永远不打算改变对象一般是不够的，它要真的一直不变才能将它示为常量。
@@ -45,19 +57,23 @@ static final ImmutableSet<SomeMutableType> mutableElements = ImmutableSet.of(mut
 static final Logger logger = Logger.getLogger(MyClass.getName());
 static final String[] nonEmptyArray = {"these", "can", "change"};
 ```
+
 这些名字通常是名词或名词短语。
 
 ## 1.2.5 非常量字段名
+
 非常量字段名以lowerCamelCase风格编写。
 
 这些名字通常是名词或名词短语。
 
 ## 1.2.6 参数名
+
 参数名以lowerCamelCase风格编写。
 
 参数应该避免用单个字符命名。
 
 ## 1.2.7 局部变量名
+
 局部变量名以lowerCamelCase风格编写，比起其它类型的名称，局部变量名可以有更为宽松的缩写。
 
 虽然缩写更宽松，但还是要避免用单字符进行命名，除了临时变量和循环变量。
@@ -65,6 +81,7 @@ static final String[] nonEmptyArray = {"these", "can", "change"};
 即使局部变量是final和不可改变的，也不应该把它示为常量，自然也不能用常量的规则去命名它。
 
 ## 1.2.8 类型变量名
+
 类型变量可用以下两种风格之一进行命名：
 
 单个的大写字母，后面可以跟一个数字(如：E, T, X, T2)。
@@ -99,19 +116,26 @@ Prose form                Correct               Incorrect
 Note：在英语中，某些带有连字符的单词形式不唯一。例如："nonempty"和"non-empty"都是正确的，因此方法名checkNonempty和checkNonEmpty也都是正确的。
 
 ---
-# 2 ***命令***
-## 2.1 javac命令 编译.java -> 生成.class文件
+
+## 2 ***命令***
+
+### 2.1 javac命令 编译.java -> 生成.class文件
+
 ```bash
 javac [options] <source files>
 ```
-## 2.2 java命令 执行一个类
+
+### 2.2 java命令 执行一个类
+
 ```bash
 # (to execute a class)
 java [options] <mainclass> [args...]
 # (to execute a jar file)
 java [options] -m <module>[/<mainclass>] [args...]
 ```
-## 2.3 jar命令 打包.class -> .jar
+
+### 2.3 jar命令 打包.class -> .jar
+
 ```bash
 jar {ctxui}[vfmn0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ...
 
@@ -121,7 +145,9 @@ jar {ctxui}[vfmn0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ..
 # Example 2: use an existing manifest file 'mymanifest' and archive all the files in the foo/ directory into 'classes.jar':
        jar cvfm classes.jar mymanifest -C foo/ .
 ```
-## 2.4 javadoc命令 生成文档
+
+### 2.4 javadoc命令 生成文档
+
 ```bash
 javadoc [options] [packagenames] [sourcefiles] [@files]
 ```

@@ -6,6 +6,118 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "test.Main",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestPoint",
+            "request": "launch",
+            "mainClass": "lang.TestPoint",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mtestn",
+            "request": "launch",
+            "mainClass": "lang.Mtestn",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "lang.Main",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Shape",
+            "request": "launch",
+            "mainClass": "test.Shape",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch AddInfoGUI",
+            "request": "launch",
+            "mainClass": "infosystem.AddInfoGUI",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestClass",
+            "request": "launch",
+            "mainClass": "test.TestClass",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "test.Test",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Animal",
+            "request": "launch",
+            "mainClass": "animal.Animal",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test.test",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graphic",
+            "request": "launch",
+            "mainClass": "gui.Graphic",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TwoButtoms",
+            "request": "launch",
+            "mainClass": "gui.TwoButtoms",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleGui3",
+            "request": "launch",
+            "mainClass": "gui.SimpleGui3",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleAnimation",
+            "request": "launch",
+            "mainClass": "gui.SimpleAnimation",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Text",
+            "request": "launch",
+            "mainClass": "gui.Text",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch RedBlackTree",
+            "request": "launch",
+            "mainClass": "algorithms.RedBlackTree",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
             "name": "Launch Reflection",
             "request": "launch",
             "mainClass": "reflection.Reflection",
