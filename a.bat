@@ -1,1 +1,0 @@
-jar -cvfm chat.jar chat -C D:\workspaceFolder\CODE_JAVA\a .
