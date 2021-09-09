@@ -58,8 +58,6 @@ git branch <分支名>
 git checkout -b dev
 # 或者 创建并切换到新的dev分支
 git switch -c dev
-# 直接切换到已有的master分支
-git switch master
 
 # 查看分支
 git branch -v 
@@ -68,6 +66,8 @@ git branch
 
 # 切换分支
 git checkout <分支名>
+# 直接切换到已有的master分支
+git switch master
 
 # 合并分支(吧指定分支合并到当前分支)
 # 只会修改当前分支
