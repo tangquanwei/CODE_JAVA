@@ -16,6 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.WindowConstants;
 
 public class SimpleChatClient {
     JTextArea incoming;
@@ -24,9 +25,14 @@ public class SimpleChatClient {
     PrintWriter writer;
     Socket sock;
 
+    public static void main(String[] args) {
+        SimpleChatClient client = new SimpleChatClient();
+        client.go();
+    }
+
     public void go() {
         JFrame frame = new JFrame("Chat by Quanwei");
-        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel mainPanel = new JPanel();
 
         incoming = new JTextArea(15, 50);
@@ -84,11 +90,6 @@ public class SimpleChatClient {
             outcoming.setText("");
             outcoming.requestFocus();
         }
-    }
-
-    public static void main(String[] args) {
-        SimpleChatClient client = new SimpleChatClient();
-        client.go();
     }
 
     /**

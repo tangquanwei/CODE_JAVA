@@ -9,7 +9,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class SimpleChatServer {
-    ArrayList clientOutputStreams;
+    ArrayList<PrintWriter> clientOutputStreams;
 
     /**
      * ClientHandler
@@ -48,9 +48,8 @@ public class SimpleChatServer {
     }
 
     public void go() {
-        clientOutputStreams = new ArrayList();
-        try {
-            ServerSocket serverSocket = new ServerSocket(5000);
+        clientOutputStreams = new ArrayList<>();
+        try (ServerSocket serverSocket = new ServerSocket(5000)){
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 PrintWriter writer = new PrintWriter(clientSocket.getOutputStream());
@@ -66,7 +65,7 @@ public class SimpleChatServer {
     }
 
     public void tellEverone(String message) {
-        Iterator it = clientOutputStreams.iterator();
+        Iterator<PrintWriter> it = clientOutputStreams.iterator();
         while (it.hasNext()) {
             try {
                 PrintWriter writer = (PrintWriter) it.next();

@@ -6,6 +6,97 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestJUnit",
+            "request": "launch",
+            "mainClass": "test.TestJUnit",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pair",
+            "request": "launch",
+            "mainClass": "lang.generic.Pair",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestThreadPool",
+            "request": "launch",
+            "mainClass": "lang.thread.TestThreadPool",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestString",
+            "request": "launch",
+            "mainClass": "lang.string.TestString",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestThreadPoll",
+            "request": "launch",
+            "mainClass": "lang.thread.TestThreadPoll",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleChatClient",
+            "request": "launch",
+            "mainClass": "lang.thread.SimpleChatClient",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestCallable",
+            "request": "launch",
+            "mainClass": "lang.thread.TestCallable",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProducerConsumer",
+            "request": "launch",
+            "mainClass": "lang.thread.ProducerConsumer",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Product",
+            "request": "launch",
+            "mainClass": "lang.thread.Product",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreadCommunication",
+            "request": "launch",
+            "mainClass": "lang.thread.ThreadCommunication",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ticket",
+            "request": "launch",
+            "mainClass": "lang.thread.Ticket",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreadTester",
+            "request": "launch",
+            "mainClass": "lang.thread.ThreadTester",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestTicket1",
+            "request": "launch",
+            "mainClass": "lang.thread.TestTicket1",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "test.Main",

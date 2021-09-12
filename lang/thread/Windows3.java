@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Windows3 implements Runnable {
     private int tickets = 50;
-    private ReentrantLock lock = new ReentrantLock(true);
+    private ReentrantLock lock = new ReentrantLock();
 
     @Override
     public void run() {
