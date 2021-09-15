@@ -1,4 +1,4 @@
-package lang.syntacticsugar;
+package lang.sugar;
 
 public interface SS {//接口没有ctor,没有main方法(不可运行),没有protected的方法
     // 默认方法 java7

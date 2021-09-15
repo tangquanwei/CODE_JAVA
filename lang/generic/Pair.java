@@ -10,9 +10,9 @@ import org.junit.Test;
  * 
  * 原始类型T会被一个限定类型替换(最前面那个 Comparable & Serializable 就是Comparable, 如果是
  * Serializable & Comparable 的话就会被 Serializable 替代, 而编译器会在必要时向 Comparable
- * 插入强制类型转换,所以应该将没有方法的接口放在限定列表的末尾), 如果没有给定限定就会被Object替代
+ * 插入强制类型转换, 所以应该将没有方法的接口放在限定列表的末尾), 如果没有给定限定就会被Object替代
  * 
- * Java泛型转换的事实;
+ * Java泛型转换的事实:
  * 
  * 1.虚拟机中没有泛型只有普通的类和方法
  * 
