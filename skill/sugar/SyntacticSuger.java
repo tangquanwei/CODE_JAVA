@@ -1,4 +1,4 @@
-package lang.sugar;
+package skill.sugar;
 
 import static java.lang.System.out; //*静态导入 导入静态方法和静态变量
 

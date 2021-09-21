@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Reflection",
+            "request": "launch",
+            "mainClass": "lang.reflection.Reflection",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Net",
+            "request": "launch",
+            "mainClass": "lang.net.Net",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestByteStream",
+            "request": "launch",
+            "mainClass": "lang.io.TestByteStream",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestIO",
+            "request": "launch",
+            "mainClass": "lang.io.TestIO",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "skill.Main",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Array",
+            "request": "launch",
+            "mainClass": "lang.serialization.Array",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
             "name": "Launch TestJUnit",
             "request": "launch",
             "mainClass": "test.TestJUnit",

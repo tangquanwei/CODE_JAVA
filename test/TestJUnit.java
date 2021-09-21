@@ -8,6 +8,14 @@ public class TestJUnit {
             System.out.println("quanwei");
         }
     }
+    @Before
+    public void setUp() {
+        System.out.println("开始测试");
+    }
+    @After
+    public void finish() {
+        System.out.println("结束测试");
+    }
 
     @Test
     public void test() {

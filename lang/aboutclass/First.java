@@ -1,4 +1,4 @@
-package lang;
+package lang.aboutclass;
 
 import java.util.Scanner;
 /* *
