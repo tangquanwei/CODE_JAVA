@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Test1",
+            "request": "launch",
+            "mainClass": "Test1",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Shape",
+            "request": "launch",
+            "mainClass": "Shape",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch KY2_9",
+            "request": "launch",
+            "mainClass": "KY2_9",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Example2_18",
+            "request": "launch",
+            "mainClass": "Example2_18",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch KY2_1",
+            "request": "launch",
+            "mainClass": "KY2_1",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "CODE_JAVA_b8407b2f"
+        },
+        {
+            "type": "java",
             "name": "Launch Reflection",
             "request": "launch",
             "mainClass": "lang.reflection.Reflection",

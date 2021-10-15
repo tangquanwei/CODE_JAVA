@@ -1,11 +1,6 @@
 package skill.sugar;
 
-import static java.lang.System.out; //*静态导入 导入静态方法和静态变量
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
-import java.sql.SQLClientInfoException;
+import static java.lang.System.out; //*静态导入 导入静态方法和静态变量`
 import java.util.Locale;
 import java.util.Scanner;
 

@@ -25,6 +25,8 @@ public class Reflection extends Cls implements Interf {
     protected double b;
     public boolean c;
 
+    protected Reflection reflection = new Reflection();
+
     /**
      * @param a
      * @param b
@@ -50,8 +52,8 @@ public class Reflection extends Cls implements Interf {
         System.out.println("private method in Reflection");
     }
 
-    private void pM(int i) {
-        System.out.println("private method in Reflection  : " + i);
+    public void pM(int i) {
+        System.out.println("public method in Reflection  : " + i);
     }
 
     /**
@@ -99,7 +101,6 @@ public class Reflection extends Cls implements Interf {
                 | IllegalArgumentException | InvocationTargetException e) {
             e.printStackTrace();
         }
-
     }
 
     @Test
@@ -179,7 +180,7 @@ public class Reflection extends Cls implements Interf {
 
     @Test
     public void testToString() {
-        System.out.println(toString());
+        System.out.println(reflection.toString());
     }
 
     public static Object copyOf(Object a, int newLength) {
@@ -209,7 +210,7 @@ public class Reflection extends Cls implements Interf {
         Class<?> c1 = Reflection.class;
         System.out.println(c1.getName());
         try {
-            Method method = c1.getDeclaredMethod("pM", int.class);
+            Method method = c1.getMethod("pM", int.class);
             method.invoke(c1.getConstructor().newInstance(), 1);
         } catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
                 | InvocationTargetException | InstantiationException e) {
