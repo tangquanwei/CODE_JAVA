@@ -35,11 +35,9 @@ import java.util.Scanner;
  * 
  * >>父类没有throws,子类异常必须try-catch
  * 
- * >2)throws(声明异常)
- * >>throw(抛出异常)方法体内
+ * >2)throws(声明异常) >>throw(抛出异常)方法体内
  */
-public class ExceptionTest {
-    @Test
+public class TestException {
     public static void main(String[] args) {
         try (Scanner in = new Scanner(System.in)) {
             int a = Integer.parseInt(in.next());
@@ -53,14 +51,16 @@ public class ExceptionTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        m3(1,0);
+
     }
-    public static void m2() throws IOException{
+
+    public static void m2() throws IOException {
         m1();
     }
 
-    public static void m1() throws FileNotFoundException,IOException{
+    public static void m1() throws FileNotFoundException, IOException {
         File file = new File("Hello.txt");
+        file.createNewFile();
         FileInputStream fis = new FileInputStream(file);
         int data = fis.read();
         while (data != -1) {
@@ -70,11 +70,10 @@ public class ExceptionTest {
         fis.close();
     }
 
-    public static void m3(int a,int b) throws RuntimeException{
-        if(b>0){
-            System.out.println(a/b);
-        }
-        else{
+    public static void m3(int a, int b) throws RuntimeException {
+        if (b > 0) {
+            System.out.println(a / b);
+        } else {
             throw new RuntimeException("除数不能为零");
         }
 
