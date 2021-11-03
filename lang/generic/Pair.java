@@ -1,8 +1,8 @@
 package lang.generic;
 
-import java.io.Serializable;
-
 import org.junit.Test;
+
+import java.io.Serializable;
 
 
 /**

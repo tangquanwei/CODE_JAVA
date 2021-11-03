@@ -1,27 +1,13 @@
 package algorithms;
 
 import java.util.PriorityQueue;
+// import static algorithms.LinkedList.*;
 
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
 
-    ListNode(int val) {
-        this.val = val;
-    }
+public final class LinkedList {
 
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-public class LinkedList {
-
-    ListNode head;
+    private ListNode head;
 
     public LinkedList() {
         head = new ListNode();
@@ -34,6 +20,20 @@ public class LinkedList {
             p.next = head.next;
             head.next = p;
         }
+    }
+
+    ListNode getListNode() {
+        return head;
+    }
+
+    ListNode indexOf(int n) {
+        ListNode cur = head;
+        for (int i = 0; i < n; ++i)
+            if (cur.next != null)
+                cur = cur.next;
+            else
+                return null;
+        return cur;
     }
 
     public void print() {
@@ -53,7 +53,7 @@ public class LinkedList {
         while (p != null) {
             System.out.print(p.val);
             if (p.next != null) {
-                System.out.print(" -> ");
+                System.out.print(" -> ");// 分隔
                 p = p.next;
             } else
                 break;
@@ -222,17 +222,170 @@ public class LinkedList {
         return p1;
     }
 
+    public static ListNode dfs(ListNode head) {
+        if (head.next == null)
+            return head;
+        // 前序遍历位置
+        ListNode last = dfs(head.next);// 最后一个
+        // 后序遍历位置
+        System.out.print(head.val + "  ");
+        return last;
+    }
+    // 不要跳进递归，而是利用明确的定义来实现算法逻辑
+
     public static ListNode reverseRecursive(ListNode head) {
         if (head.next == null)
             return head;
-        ListNode last = reverseRecursive(head.next);
+        ListNode last = reverseRecursive(head.next);// 最后一个
+
+        System.out.print(head.val + "->");
+        // 这里的haed是最后一个的前一个
         head.next.next = head;
         head.next = null;
+        // 始终返回最后一个
         return last;
     }
 
+    private static ListNode successor = null; // 后驱节点
+
+    // 反转以 head 为起点的 n 个节点，返回新的头结点
+    public static ListNode reverseN(ListNode head, int n) {
+        if (n == 1) {
+            // 记录第 n + 1 个节点
+            successor = head.next;
+            return head;
+        }
+        // 以 head.next 为起点，需要反转前 n - 1 个节点
+        ListNode last = reverseN(head.next, n - 1);
+
+        head.next.next = head;
+        // 让反转之后的 head 节点和后面的节点连起来
+        head.next = successor;
+        return last;
+    }
+
+    ListNode reverseBetween(ListNode head, int m, int n) {
+        // base case
+        if (m == 1) {
+            return reverseN(head, n);
+        }
+        // 前进到反转的起点触发 base case
+        head.next = reverseBetween(head.next, m - 1, n - 1);
+        return head;
+    }
+
+    public static ListNode reverse(ListNode head) {
+        ListNode pre, cur, nxt;
+        pre = null;
+        cur = nxt = head;
+        while (cur != null) {
+            nxt = cur.next;
+            cur.next = pre;// 反转
+            // 后移
+            pre = cur;
+            cur = nxt;
+        }
+        return pre;
+    }
+
+    public static ListNode reverse(ListNode head, ListNode b) {
+        ListNode pre, cur, nxt;
+        pre = null;
+        cur = nxt = head;
+        while (cur != b) {// 反转b之前的
+            nxt = cur.next;
+            cur.next = pre;// 反转
+            // 后移
+            pre = cur;
+            cur = nxt;
+        }
+        return pre;
+    }
+
+    public static ListNode reverseKGroup(ListNode head, int k) {
+        if (head == null)
+            return head;
+        // 区间 [a, b) 包含 k 个待反转元素
+        ListNode a, b;
+        a = b = head;
+        for (int i = 0; i < k; i++) {
+            // 不足 k 个，不需要反转，base case
+            if (b == null)
+                return head;
+            b = b.next;
+        }
+
+        // 反转前 k 个元素
+        ListNode newHead = reverse(a, b);
+        // 递归反转后续链表并连接起来
+        a.next = reverseKGroup(b, k);
+        return newHead;
+    }
+
+    /**
+     * 判断回文链表1
+     */
+    ListNode left;
+
+    public boolean isPalindrome(ListNode head) {
+        left = head;
+        return traverse(head);
+    }
+
+    private boolean traverse(ListNode right) {
+        if (right == null)
+            return true;
+        boolean res = traverse(right.next);// 最后一个
+        res = res && (right.val == left.val);
+        left = left.next;
+        return res;
+    }
+
+    /**
+     * 判断回文链表2
+     */
+    public boolean isPal(ListNode head) {
+        // 快慢指针找中点
+        ListNode fast, slow;
+        fast = slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        ListNode p = slow;
+        // 奇数个节点slow后移一位,中点不用判断,不反转
+        if (fast != null) {
+            slow = slow.next;
+        }
+        // 反转slow
+        ListNode left = head;
+        ListNode right = reverse(slow), q = right;
+        // 判断回文
+        while (right != null) {
+            if (right.val != left.val)
+                return false;
+            right = right.next;
+            left = left.next;
+        }
+        // 还原
+        p.next = reverse(q);
+        return true;
+    }
+
     public static void main(String[] args) {
-        
+        LinkedList l1 = new LinkedList(0, 1, 2, 3, 4, 5, 5, 5, 4, 3, 2, 1, 0);
+        ListNode node = l1.getListNode();
+        System.out.println(l1.isPal(node));
+        print(node);
+        // node = reverse(node, l1.indexOf(3));
+        // ListNode r = reverseKGroup(node, 2);
+        // print(r);
+        // reverseRecursive();
+        // System.out.println();
+        // System.out.println(l1.indexOf(0));
+        // System.out.println(l1.indexOf(9));
+        // System.out.println(l1.indexOf(10));
+        // dfs(node);
     }
 
 }

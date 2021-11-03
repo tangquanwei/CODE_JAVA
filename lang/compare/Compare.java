@@ -3,7 +3,7 @@ package lang.compare;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * JAVA对象一般不能使用>或<比较大小

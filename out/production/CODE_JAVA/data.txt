@@ -1,0 +1,22 @@
+By_Quanwei
+public void Read() {
+    try {
+        FileReader fileReader = new FileReader(file);
+        int read;
+        while ((read = fileReader.read()) != -1)
+            System.out.print((char)read);
+        fileReader.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+
+public void Write(String toBeWrite) {
+    try {
+        FileWriter fileWriter = new FileWriter(file);
+        fileWriter.append(toBeWrite);
+        fileWriter.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}

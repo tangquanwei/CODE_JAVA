@@ -1,6 +1,7 @@
 package test;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.Test;
 
 public class TestJUnit {
     public static void main(String[] args) {
@@ -8,11 +9,9 @@ public class TestJUnit {
             System.out.println("quanwei");
         }
     }
-    @Before
     public void setUp() {
         System.out.println("开始测试");
     }
-    @After
     public void finish() {
         System.out.println("结束测试");
     }

@@ -1,5 +1,9 @@
 package test;
 
+
+import org.junit.*;
+
+
 enum Gender {
     Male, Female
 }
@@ -66,7 +70,8 @@ public class Student {
         new Student().test();
     }
 
-    private void test() {
+    @Test
+    public void test() {
         Student quanwei = new Student("20203206222", "唐权威", Gender.Male, 19);
         System.out.println(quanwei);
         System.out.println("-----修改后-------");
